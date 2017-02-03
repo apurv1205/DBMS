@@ -1,0 +1,238 @@
+The required table to cross check the querries are :
+
+mysql> SELECT * FROM Student;
++----------------+-----------+------------+-------+------------+
+| name           | roll      | department | hall  | contact    |
++----------------+-----------+------------+-------+------------+
+| Rajan Mishra   | 14CS30006 | CSE        | RP    | 9999999999 |
+| Anthony        | 14CS10004 | CSE        | RP    | 9999999999 |
+| Aniket Kumar   | 14CS10006 | CSE        | RK    | 9999999999 |
+| Animesh Kumar  | 14CS10008 | CSE        | RK    | 9999999999 |
+| Sujata Kumari  | 14CS10028 | CSE        | SN    | 9999999999 |
+| Kumar Saurav   | 14CS10014 | CSE        | Azad  | 9999999999 |
+| Ranjan Prasad  | 14CS10034 | CSE        | Azad  | 9999999999 |
+| Sanjana Gupta  | 14CS10044 | CSE        | MT    | 9999999999 |
+| Rajiv Malhotra | 14CS30009 | CSE        | LLR   | 9999999999 |
+| Amrith Prasad  | 14CS20007 | CSE        | BRH   | 9999999999 |
+| Anurag Gupta   | 14CS20023 | CSE        | LBS   | 9999999999 |
+| Sanjeev Gupta  | 14CS20011 | CSE        | Nehru | 9999999999 |
+| Shubham Gupta  | 14CS10011 | CSE        | Patel | 9999999999 |
++----------------+-----------+------------+-------+------------+
+13 rows in set (0.00 sec)
+
+===============================================================================================================================
+
+mysql> SELECT * FROM Takes;
++-----------+---------+-------+
+| roll      | CID     | marks |
++-----------+---------+-------+
+| 14CS10011 | CS40009 |    49 |
+| 14CS20011 | CS40009 |    78 |
+| 14CS20023 | CS40009 |    88 |
+| 14CS20007 | CS20007 |    92 |
+| 14CS30009 | CS20007 |    87 |
+| 14CS10044 | CS20007 |    75 |
+| 14CS10034 | CS50003 |    56 |
+| 14CS10014 | CS50003 |    76 |
+| 14CS10028 | CS50003 |    96 |
+| 14CS10008 | CS50003 |    44 |
+| 14CS10006 | CS10003 |    64 |
+| 14CS10004 | CS10003 |    84 |
+| 14CS30006 | CS10003 |    90 |
+| 14CS30006 | CS20004 |    87 |
+| 14CS10004 | CS20004 |    74 |
+| 14CS10028 | CS20004 |    75 |
+| 14CS10006 | CS20004 |    76 |
+| 14CS10008 | CS20004 |    54 |
+| 14CS20007 | CS10003 |    94 |
+| 14CS30009 | CS50003 |    91 |
++-----------+---------+-------+
+20 rows in set (0.00 sec)
+
+===============================================================================================================================
+
+mysql> SELECT * FROM Grade_card;
++-----------+---------+--------+
+| roll      | CID     | grades |
++-----------+---------+--------+
+| 14CS10011 | CS40009 | P      |
+| 14CS20011 | CS40009 | B      |
+| 14CS20023 | CS40009 | A      |
+| 14CS20007 | CS20007 | EX     |
+| 14CS30009 | CS20007 | EX     |
+| 14CS10044 | CS20007 | B      |
+| 14CS10034 | CS50003 | D      |
+| 14CS10014 | CS50003 | B      |
+| 14CS10028 | CS50003 | EX     |
+| 14CS10008 | CS50003 | P      |
+| 14CS10006 | CS10003 | C      |
+| 14CS10004 | CS10003 | A      |
+| 14CS30006 | CS10003 | EX     |
+| 14CS30006 | CS20004 | EX     |
+| 14CS10004 | CS20004 | B      |
+| 14CS10028 | CS20004 | B      |
+| 14CS10006 | CS20004 | B      |
+| 14CS10008 | CS20004 | P      |
+| 14CS20007 | CS10003 | EX     |
+| 14CS30009 | CS50003 | EX     |
++-----------+---------+--------+
+20 rows in set (0.00 sec)
+
+===============================================================================================================================
+
+mysql> SELECT * FROM Courses;
++----------------+---------+------------+---------+
+| Cname          | CID     | department | credits |
++----------------+---------+------------+---------+
+| DBMS Theory    | CS40009 | CSE        |       4 |
+| Algorithm      | CS20007 | CSE        |       4 |
+| SNLP           | CS50003 | CSE        |       3 |
+| PDS            | CS10003 | CSE        |       4 |
+| Algorithms Lab | CS20004 | CSE        |       2 |
++----------------+---------+------------+---------+
+5 rows in set (0.00 sec)
+
+===============================================================================================================================
+
+mysql> SELECT * FROM Teaches;
++------+---------+------+--------+
+| TID  | CID     | slot | CLID   |
++------+---------+------+--------+
+| 1    | CS40009 | A    | NC142  |
+| 1    | CS50003 | B    | V2     |
+| 3    | CS20004 | C    | V2     |
+| 5    | CS10003 | A    | CSE107 |
+| 1    | CS20007 | C    | NC142  |
++------+---------+------+--------+
+5 rows in set (0.00 sec)
+
+===============================================================================================================================
+
+mysql> SELECT * FROM Teacher;
++------+-----+------------+------------+
+| name | TID | department | contact    |
++------+-----+------------+------------+
+| PPC  | 1   | CSE        | 9999999999 |
+| SS   | 2   | CSE        | 9999999999 |
+| PB   | 3   | CSE        | 9999999999 |
+| PPD  | 4   | CSE        | 9999999999 |
+| AM   | 5   | CSE        | 9999999999 |
+| PG   | 6   | CSE        | 9999999999 |
++------+-----+------------+------------+
+6 rows in set (0.00 sec)
+
+===============================================================================================================================
+
+mysql> SELECT * FROM Classroom;
++---------------------+--------+------------+
+| Building            | CLID   | Room       |
++---------------------+--------+------------+
+| Nalanda Complex     | NC142  | 142-center |
+| Nalanda Complex     | NC442  | 442-center |
+| CS Department       | CSE107 | 107        |
+| Vikramshila Complex | V2     | V2         |
++---------------------+--------+------------+
+4 rows in set (0.00 sec)
+
+===============================================================================================================================
+
+mysql> SELECT * FROM Timings;
++------+-----------------------+
+| slot | time_schedule         |
++------+-----------------------+
+| A    | M:8-10,W:12-1,F:3-4;  |
+| B    | M:4-5,W:4-5,F:3-4;    |
+| C    | T:10-12,W:3-5,TH:8-9; |
++------+-----------------------+
+3 rows in set (0.00 sec)
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+The SQL querries for part D along with their outputs are :-
+
+1. 
+List all the Courses taught by the teacher - “PPC” :-
+
+mysql> SELECT Cname FROM Courses WHERE CID IN (SELECT CID FROM Teacher,Teaches WHERE Teacher.TID=Teaches.TID AND Teacher.name="PPC");
++-------------+
+| Cname       |
++-------------+
+| DBMS Theory |
+| Algorithm   |
+| SNLP        |
++-------------+
+3 rows in set (0.00 sec)
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+2.
+ List all students registered in the courses taught by “PPC” :-
+
+mysql> SELECT name FROM Student WHERE roll IN (SELECT roll FROM Takes WHERE CID IN (SELECT CID FROM Teacher,Teaches WHERE Teacher.TID=Teaches.TID AND Teacher.name="PPC"));
++----------------+
+| name           |
++----------------+
+| Animesh Kumar  |
+| Sujata Kumari  |
+| Kumar Saurav   |
+| Ranjan Prasad  |
+| Sanjana Gupta  |
+| Rajiv Malhotra |
+| Amrith Prasad  |
+| Anurag Gupta   |
+| Sanjeev Gupta  |
+| Shubham Gupta  |
++----------------+
+10 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+3.
+List the timings of all courses in Class-Room “NC142”.
+
+SELECT time_schedule FROM Timings WHERE slot IN (SELECT slot FROM Teaches WHERE CLID="NC142");
+
+mysql> SELECT time_schedule FROM Timings WHERE slot IN (SELECT slot FROM Teaches WHERE CLID="NC142");
++-----------------------+
+| time_schedule         |
++-----------------------+
+| M:8-10,W:12-1,F:3-4;  |
+| T:10-12,W:3-5,TH:8-9; |
++-----------------------+
+2 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+4.
+List the name of the students who received the highest marks in the courses taught by “PPC”
+
+mysql> SELECT name FROM Student WHERE roll in (SELECT roll FROM (SELECT CID,MAX(marks) AS max_marks FROM Takes GROUP BY CID HAVING CID IN (SELECT CID FROM Teacher,Teaches WHERE Teacher.TID=Teaches.TID AND Teacher.name="PPC")) AS T,Takes  WHERE T.max_marks=Takes.marks);
++---------------+
+| name          |
++---------------+
+| Sujata Kumari |
+| Amrith Prasad |
+| Anurag Gupta  |
++---------------+
+3 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+5.
+ List the students who have received a grade of “EX” in the largest number of courses.
+
+mysql> SELECT name,Student.roll FROM Student,(SELECT roll,grades,CID,COUNT(grades) AS EX_count FROM Grade_card WHERE grades="EX" GROUP BY roll) AS T WHERE T.roll=Student.roll AND EX_count = (SELECT MAX(EX_count) FROM (SELECT roll,grades,CID,COUNT(grades) AS EX_count FROM Grade_card WHERE grades="EX" GROUP BY roll) AS T );
++----------------+-----------+
+| name           | roll      |
++----------------+-----------+
+| Amrith Prasad  | 14CS20007 |
+| Rajan Mishra   | 14CS30006 |
+| Rajiv Malhotra | 14CS30009 |
++----------------+-----------+
+3 rows in set (0.00 sec)
+
+
+-------------------------------------------------------------------------------------------------------------------------------

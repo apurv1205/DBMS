@@ -1,0 +1,23 @@
+For this assignment only one package is required that is MySQLdb
+
+1.MySQLdbs
+
+For python, most widely used package is MySQLdb (Oracle connector has some issues)
+To install into a linux machine type the following in terminal :
+	$ pip install MySQL-python
+
+****for mysql_config error type the following in the terminal :
+****	$ sudo apt-get install libmysqlclient-dev
+****and then run the pip install command
+
+
+2.python-prettytable package 
+
+PrettyTable is a simple Python library designed to make it quick and easy to represent tabular data in visually appealing ASCII tables.
+
+For installing this package, type the following in the terminal
+	$ pip install PTable
+
+
+-----After all the dependencies are installed, run the python file using the following command after entering the enclosing directory in terminal :
+	$ python sql_querries.py

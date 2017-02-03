@@ -1,0 +1,32 @@
+DBMS Lab Assignment 1:
+
+ER Diagram, SQL queries
+
+1. Design an Academic System with Students, Teachers, Courses, Class-Rooms, Timings, Examinations, Marks, Grade-Cards.
+
+A. Design an E-R diagram to represent this data
+
+B. Design tables to represent this data.
+
+C. Write relational algebra statements to answer the following queries:
+
+i. List all the Courses taught by the teacher - “PPC”.
+
+ii. List all students registered in the courses taught by “PPC”.
+
+iii. List the timings of all courses in Class-Room “NC142”.
+
+iv. List the name of the students who received the highest marks in the courses taught by “PPC”
+
+v. List the students who have received a grade of “EX” in the largest number of courses.
+
+D. Create the tables in question B in SQL. Insert few example records into the tables.
+
+Write and execute the relational algebra queries above in SQL.
+
+
+
+Time: 1 week. Lab Venue: Annexe Software Lab, CSE
+Individual Submission
+
+
