@@ -1,2 +1,2 @@
 # DBMS
-DBMS Lab Assignments
+Sixth Semester course DBMS Lab in IIT Kharagpur's Assignments
